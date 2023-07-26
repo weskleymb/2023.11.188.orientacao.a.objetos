@@ -6,7 +6,7 @@ export class ContaCorrente extends Conta {
 
   // sobrescrevendo o comportamento de sacar
   sacar(valor) {
-    const valorSacar = valor + this.#taxa;
+    const valorSacar = valor + valor * this.#taxa;
     return super.sacar(valorSacar);
   }
 }

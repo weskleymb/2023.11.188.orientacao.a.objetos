@@ -70,4 +70,11 @@ export class Conta {
     }
     return false;
   }
+
+  toString() {
+    return `Agencia: ${this.agencia}, 
+            Conta: ${this.numero}, 
+            Titular: ${this.titular.nome}, 
+            Saldo: R$ ${this.saldo.toFixed(2)}`;
+  }
 }
