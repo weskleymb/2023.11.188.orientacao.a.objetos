@@ -7,3 +7,4 @@ const contaJoao = new ContaCorrente(1, 111, joao);
 contaJoao.depositar(1000);
 
 window.alert(contaJoao);
+console.log(contaJoao);
