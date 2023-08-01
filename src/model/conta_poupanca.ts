@@ -1,4 +1,4 @@
-import { Conta } from "./conta";
+import { Conta } from "./conta.js";
 
 export class ContaPoupanca extends Conta {
 
@@ -7,6 +7,6 @@ export class ContaPoupanca extends Conta {
     render() {
         const valorRendimento = this.saldo * this._rendimento;
         this.depositar(valorRendimento);
-    }
+    } 
 
 }

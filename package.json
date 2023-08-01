@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "npm run compile",
-    "compile": ".\\node_modules\\.bin\\tsc"
+    "compile": ".\\node_modules\\.bin\\tsc -w"
   }
 }

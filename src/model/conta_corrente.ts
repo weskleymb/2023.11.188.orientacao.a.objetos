@@ -1,4 +1,4 @@
-import { Conta } from "./conta";
+import { Conta } from "./conta.js";
 
 export class ContaCorrente extends Conta {
   // definindo os atributos
@@ -8,5 +8,5 @@ export class ContaCorrente extends Conta {
   sacar(valor: number): boolean {
     const valorSacar = valor + valor * this._taxa;
     return super.sacar(valorSacar);
-  }
+  } 
 }

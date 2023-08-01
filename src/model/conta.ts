@@ -1,4 +1,4 @@
-import { Pessoa } from "./pessoa";
+import { Pessoa } from "./pessoa.js";
 
 // criar um modelo de conta bancaria
 export abstract class Conta {
@@ -73,11 +73,8 @@ export abstract class Conta {
       return false;
     }
   
-    toString() {
-      return `Agencia: ${this._agencia}, 
-              Conta: ${this._numero}, 
-              Titular: ${this._titular.getNome()}, 
-              Saldo: R$ ${this._saldo.toFixed(2)}`;
+    toString(): string {
+      return `Agencia: ${this._agencia}, Conta: ${this._numero}, Titular: ${this._titular.getNome()}, Saldo: R$ ${this._saldo.toFixed(2)}`;
     }
   }
   
