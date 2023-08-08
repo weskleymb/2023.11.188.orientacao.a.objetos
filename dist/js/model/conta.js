@@ -1,37 +1,34 @@
 // criar um modelo de conta bancaria
 export class Conta {
-    // definindo os atributos
+    // atributos
     _agencia;
     _numero;
     _titular;
     _saldo = 0.0;
-    // definindo o construtor
+    // construtor
     constructor(agencia, numero, titular) {
         this._agencia = agencia;
         this._numero = numero;
         this._titular = titular;
     }
-    // definindo os metodos
+    // metodos
     get agencia() {
         return this._agencia;
     }
-    set agencia(novaAgencia) {
-        this._agencia = novaAgencia;
+    set agencia(agencia) {
+        this._agencia = agencia;
     }
     get numero() {
         return this._numero;
     }
-    set numero(novoNumero) {
-        this._numero = novoNumero;
+    set numero(numero) {
+        this._numero = numero;
     }
     get titular() {
         return this._titular;
     }
-    set titular(novoTitular) {
-        if (novoTitular === null) {
-            throw new Error("Titular não pode ser em branco");
-        }
-        this._titular = novoTitular;
+    set titular(titular) {
+        this._titular = titular;
     }
     get saldo() {
         return this._saldo;
@@ -58,8 +55,5 @@ export class Conta {
             return contaDestino.depositar(valor);
         }
         return false;
-    }
-    toString() {
-        return `Agencia: ${this._agencia}, Conta: ${this._numero}, Titular: ${this._titular.getNome()}, Saldo: R$ ${this._saldo.toFixed(2)}`;
     }
 }

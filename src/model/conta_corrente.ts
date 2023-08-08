@@ -1,7 +1,8 @@
 import { Conta } from "./conta.js";
 
 export class ContaCorrente extends Conta {
-  // definindo os atributos
+  
+  // atributos
   private _taxa: number = 0.01;
 
   // sobrescrevendo o comportamento de sacar
@@ -9,4 +10,5 @@ export class ContaCorrente extends Conta {
     const valorSacar = valor + valor * this._taxa;
     return super.sacar(valorSacar);
   } 
+  
 }

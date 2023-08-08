@@ -1,33 +1,49 @@
 export class Pessoa {
-    nome;
-    cpf;
-    idade;
-    sexo;
-    // Atributos e construtor
+    // atributos
+    _nome;
+    _cpf;
+    _idade;
+    _sexo;
+    // construtor
     constructor(nome, cpf, idade, sexo) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.sexo = sexo;
+        this._nome = nome;
+        this._cpf = cpf;
+        this._idade = idade;
+        this._sexo = sexo;
     }
-    // Métodos
-    getNome() {
-        return this.nome;
+    logar(usuario, senha) {
+        throw new Error("Method not implemented.");
     }
-    getCpf() {
-        return this.cpf;
+    deslogar() {
+        throw new Error("Method not implemented.");
     }
-    getIdade() {
-        return this.idade;
+    // métodos
+    get nome() {
+        return this._nome;
     }
-    getSexo() {
-        return this.sexo;
+    set nome(nome) {
+        const nomeValido = nome.trim().length >= 2;
+        if (nomeValido) {
+            this._nome = nome.toUpperCase().trim();
+        }
+        throw new Error("Nome inválido");
     }
-    toString() {
-        return `Nome: ${this.nome}, CPF: ${this.cpf}, Idade: ${this.idade}, Sexo: ${this.sexo}`;
+    get cpf() {
+        return this._cpf;
+    }
+    set cpf(cpf) {
+        this._cpf = cpf;
+    }
+    get idade() {
+        return this._idade;
+    }
+    set idade(idade) {
+        this._idade = idade;
+    }
+    get sexo() {
+        return this._sexo;
+    }
+    set sexo(sexo) {
+        this._sexo = sexo;
     }
 }

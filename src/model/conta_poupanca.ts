@@ -7,6 +7,6 @@ export class ContaPoupanca extends Conta {
     render() {
         const valorRendimento = this.saldo * this._rendimento;
         this.depositar(valorRendimento);
-    } 
+    }
 
 }

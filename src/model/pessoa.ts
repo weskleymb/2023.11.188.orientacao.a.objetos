@@ -1,35 +1,54 @@
 export class Pessoa {
 
-    // Atributos e construtor
-    constructor(private nome: string,
-                private cpf: string,
-                private idade: number,
-                private sexo: string) { 
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.sexo = sexo;
+    // atributos
+    private _nome: string;
+    private _cpf: string;
+    private _idade: number;
+    private _sexo: string;
+
+    // construtor
+    constructor(nome: string, cpf: string, idade: number, sexo: string) {
+        this._nome = nome;
+        this._cpf = cpf;
+        this._idade = idade;
+        this._sexo = sexo;
     }
     
-    // Métodos
-    getNome(): string {
-        return this.nome;
+    // métodos
+    get nome(): string {
+        return this._nome;
     }
 
-    getCpf(): string {
-        return this.cpf;
+    set nome(nome: string) {
+        const nomeValido = nome.trim().length >= 2;
+        if (nomeValido) {
+            this._nome = nome.toUpperCase().trim();
+        }
+        throw new Error("Nome inválido");
     }
 
-    getIdade(): number {
-        return this.idade;
+    get cpf(): string {
+        return this._cpf;
     }
 
-    getSexo(): string {
-        return this.sexo;
+    set cpf(cpf: string) {
+        this._cpf = cpf;
     }
 
-    toString(): string {
-        return `Nome: ${this.nome}, CPF: ${this.cpf}, Idade: ${this.idade}, Sexo: ${this.sexo}`;
+    get idade(): number {
+        return this._idade;
+    }
+
+    set idade(idade: number) {
+        this._idade = idade;
+    }
+
+    get sexo(): string {
+        return this._sexo;
+    }
+
+    set sexo(sexo: string) {    
+        this._sexo = sexo;
     }
 
 }

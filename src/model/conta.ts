@@ -2,45 +2,43 @@ import { Pessoa } from "./pessoa.js";
 
 // criar um modelo de conta bancaria
 export abstract class Conta {
-    // definindo os atributos
+    
+  // atributos
     private _agencia: number;
     private _numero: number;
     private _titular: Pessoa;
     private _saldo: number = 0.0;
   
-    // definindo o construtor
+    // construtor
     constructor(agencia: number, numero: number, titular: Pessoa) {
       this._agencia = agencia;
       this._numero = numero;
       this._titular = titular;
     }
   
-    // definindo os metodos
+    // metodos
     get agencia(): number {
       return this._agencia;
     }
   
-    set agencia(novaAgencia: number) {
-      this._agencia = novaAgencia;
+    set agencia(agencia: number) {
+      this._agencia = agencia;
     }
   
     get numero(): number {
       return this._numero;
     }
   
-    set numero(novoNumero: number) {
-      this._numero = novoNumero;
+    set numero(numero: number) {
+      this._numero = numero;
     }
   
     get titular(): Pessoa {
       return this._titular;
     }
   
-    set titular(novoTitular: Pessoa) {
-      if (novoTitular === null) {
-        throw new Error("Titular não pode ser em branco");
-      }
-      this._titular = novoTitular;
+    set titular(titular: Pessoa) {
+      this._titular = titular;
     }
   
     get saldo(): number {
@@ -72,9 +70,6 @@ export abstract class Conta {
       }
       return false;
     }
-  
-    toString(): string {
-      return `Agencia: ${this._agencia}, Conta: ${this._numero}, Titular: ${this._titular.getNome()}, Saldo: R$ ${this._saldo.toFixed(2)}`;
-    }
+
   }
   
