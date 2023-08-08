@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "typescript": "^5.1.6"
   },
@@ -6,3 +7,12 @@
     "compile": ".\\node_modules\\.bin\\tsc -w"
   }
 }
+=======
+	"dependencies": {
+		"typescript": "^5.1.6"
+	},
+	"scripts": {
+		"compile": ".\\node_modules\\.bin\\tsc"
+	}
+}
+>>>>>>> 24a3d07e5b7944ea37f95da8e8297f2c6be61a01
